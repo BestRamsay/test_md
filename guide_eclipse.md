@@ -19,10 +19,10 @@
 
 ### Добавление в Eclipse расширений ###
 Необходимо уставновить :С/С++ GDB Hardware Debugging. Его можно найти по пути
-Help -> Install New Software...
+**Help -> Install New Software...**
 В писать в Work with: ресурс, с которого вы будете скачивать. [Например](https://download.eclipse.org/releases/2019-12/) 
 или 
-Help -> Eclipse Marketplase...
+**Help -> Eclipse Marketplase...**
 В этом маркетплейсе вы аналогично можете найти GDB Hardware Debugging.
 
 В итоге в Run -> Debug Configurations... должен появится GDB Hardware Debugging
