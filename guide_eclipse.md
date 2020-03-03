@@ -20,12 +20,18 @@
 ### Добавление в Eclipse расширений ###
 Необходимо уставновить :С/С++ GDB Hardware Debugging. Его можно найти по пути
 **Help -> Install New Software...**
-В писать в Work with: ресурс, с которого вы будете скачивать. [Например](https://download.eclipse.org/releases/2019-12/) 
-или 
-**Help -> Eclipse Marketplase...**
-В этом маркетплейсе вы аналогично можете найти GDB Hardware Debugging.
+В писать в Work with: ресурс, с которого вы будете скачивать, [Например](https://download.eclipse.org/releases/2019-12/),
+или **Help -> Eclipse Marketplase...** в этом маркетплейсе вы аналогично можете найти GDB Hardware Debugging.
 
-В итоге в Run -> Debug Configurations... должен появится GDB Hardware Debugging
+В итоге в **Run -> Debug Configurations...** должен появится GDB Hardware Debugging
+
+### Изменение правил UDEV  ###
+Для этого надо положить в **/etc/udev/rules.d/** файл, находящийся по пути, /usr/share/openocd/contrib/99-openocd.rules, который идет в комплекте с openocd. 
+Если вы не нашли этого файла у себя в системе, можно попробовать добавить скачать [файл](https://github.com/ntfreak/openocd/blob/master/contrib/60-openocd.rules) и добавить уже его. 
+Перезагрузить правила UDEV:
+
+	sudo udevadm control --reload-rules
+
 
 ### Правильная генерация кода STM32CubeMx ###
 
