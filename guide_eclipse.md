@@ -11,8 +11,10 @@
 ### Eclipse ###
 Скачайте [Eclipse](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-12/R/eclipse-inst-linux64.tar.gz) для вашего ПК и установите его. 
 ### <a name="GBD">GDB</a>  ###
-Скачайте [arm-none-eabi-gdb](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) и распакуйте в удобную для вас папку.
-	Для archlinux необходим так же пакет:
+Скачайте [arm-none-eabi-gdb](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) и распакуйте в удобную для вас папку.  
+
+Для archlinux необходимо далее установить дополнительный пакет:
+
 	pacman -S --needed arm-none-eabi-newlib
 ### STM32CubeMX ###
 Скачайте [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) и установите его. 
