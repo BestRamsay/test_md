@@ -3,6 +3,7 @@
 
 ### JRE/Java ###
 	sudo apt-get install default-jdk
+	sudo pacman -S java-runtime-common
 или используя гайды с русскоязычной версии [сайта](https://help.ubuntu.ru/wiki/java) посвещенного Ubuntu.
 ### Openocd ###
 	sudo apt-get install openocd
@@ -22,7 +23,7 @@
 **Help -> Install New Software** .
 
 И прописать в **Work with** ресурс, с которого вы будете скачивать, [например](https://download.eclipse.org/releases/2019-12/),
-или **Help -> Eclipse Marketplase.** в этом маркетплейсе вы аналогично можете найти GDB Hardware Debugging.
+или **Help -> Eclipse Marketplase.** в этом маркетплейсе вы аналогично можете найти GDB Hardware Debugging. (Он будет доступен после установки плагина GNU MCU Eclipse, например)
 
 Итог: в **Run -> Debug Configurations** должен появится GDB Hardware Debugging
 
