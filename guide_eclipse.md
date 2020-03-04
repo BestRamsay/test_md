@@ -9,7 +9,7 @@
 или скачайте с официального [сайта](http://openocd.org/).
 ### Eclipse ###
 Скачайте [Eclipse](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-12/R/eclipse-inst-linux64.tar.gz) для вашего ПК и установите его. 
-### GDB ###
+### <a name="GBD"></a> GDB ###
 Скачайте [arm-none-eabi-gdb](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) и распакуйте в удобную для вас папку.
 ### STM32CubeMX ###
 Скачайте [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) и установите его. 
@@ -37,11 +37,25 @@
 После того, как вы настроили нужную для себя периферию, необходимо во вкладке **Project Manager** выбрать в параметрах **Tolchain/IDE ->Makefile**
 
 ### Импортирование проекта в Eclipse ###
+Необходимо во выбрать **File->New->Makefile Project with Existing Code**. Выбираем Cross GCC.Далее собираем проект.
 
+После чего нужно перейти **Run->Debug Configurations->GDB Hardware Debugging** и выбрать нужную вам конфигурацию.
+
+Вкладка **Main**
+
+1. В **Project** выбираем наш проект. 
+2. В **C/C++ Application** выбираем **build/name_project.elf**.
+
+Вкладка **Debugger**
+
+1. **GDB Command** прописываем AБСОЛЮТНЫЙ путь до [arm-none-eabi-gdb](#GDB).
+2. Ставим галочку **Remote timeout** и прописываем порт **3333**.
 
 ## Запуск отладки ##
 1. Запуск openocd
+
 	sudo openocd  -f /usr/share/openocd/scripts/board/stm32fXX.cfg
 Где **XX** модель вашей платы. 
 2. Работа в Eclipse
-А в Eclipse нажимаем на отладку(Debbug). Если все ок, то Eclipse предложит перейти в перспективу отладки и остановит программу. Можно ставить точку останова в коде и возобновить работу программы.
+
+А в Eclipse нажимаем на отладку(Debug). Если все ок, то Eclipse предложит перейти в перспективу отладки и остановит программу. Можно ставить точку останова в коде и возобновить работу программы.
