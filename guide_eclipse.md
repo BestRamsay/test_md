@@ -3,6 +3,7 @@
 
 ### JRE/Java ###
 	sudo apt-get install default-jdk
+	sudo pacman -S java-runtime-common
 или используя гайды с русскоязычной версии [сайта](https://help.ubuntu.ru/wiki/java) посвещенного Ubuntu.
 ### Openocd ###
 	sudo apt-get install openocd
@@ -10,7 +11,11 @@
 ### Eclipse ###
 Скачайте [Eclipse](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-12/R/eclipse-inst-linux64.tar.gz) для вашего ПК и установите его. 
 ### <a name="GBD">GDB</a>  ###
-Скачайте [arm-none-eabi-gdb](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) и распакуйте в удобную для вас папку.
+Скачайте [arm-none-eabi-gdb](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) и распакуйте в удобную для вас папку.  
+
+Для archlinux необходимо далее установить дополнительный пакет:
+
+	pacman -S --needed arm-none-eabi-newlib
 ### STM32CubeMX ###
 Скачайте [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) и установите его. 
 
@@ -22,7 +27,7 @@
 **Help -> Install New Software** .
 
 И прописать в **Work with** ресурс, с которого вы будете скачивать, [например](https://download.eclipse.org/releases/2019-12/),
-или **Help -> Eclipse Marketplase.** в этом маркетплейсе вы аналогично можете найти GDB Hardware Debugging.
+или **Help -> Eclipse Marketplase.** в этом маркетплейсе вы аналогично можете найти GDB Hardware Debugging. (Он будет доступен после установки плагина GNU MCU Eclipse, например)
 
 Итог: в **Run -> Debug Configurations** должен появится GDB Hardware Debugging
 
